@@ -19,16 +19,19 @@ $( "#textarea01" ).change(function(e) {
     $("#text01").html("Et falten: "+ cars +" caràcters");
 });
 
-$( "#textarea02" ).keydown(function(e) {
-//    if (e.keyCode === 87 && e.keyCode === 69 && e.keyCode === 82) {
-    if (e.keyCode === 87) {
-        var cont = $(this).val();
-        cont = cont + e;
-        $("#textarea02").html(e.keyCode);
-    }else{
-        $("#textarea02").html(" ");
+$( "#textarea02" ).keydown(function(event) {
+//    if (event.keyCode === 87) {
+//        var cont = $(this).val();
+//        cont = cont + event;
+//        $("#textarea02").html(event.keyCode);    
+//    }else{
+//        $("#textarea02").html(" ");
+//    }
+    if(event.keyCode===87){//Tecla w
+        //$("#textarea02").html(event.keyCode);
+        alert("Tecla no permesa");
     }
-//    $("#textarea02").html(" ");
+//alert("dksdhsdj");
 });
 
 function nif_valido($nif) {
